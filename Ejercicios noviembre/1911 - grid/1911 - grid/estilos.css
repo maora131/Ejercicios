@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+body {
+    background: #ffffff73;
+    color: #777;
+    padding: 1em;
+    font-family: sans-serif;
+    margin: 3em;
+    background-image: url(https://images.pexels.com/photos/1212600/pexels-photo-1212600.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); /*pixelao uggh*/
+    background-size:cover;
+}
+
+/*pequeños títulos*/
+article h2{
+    color:rgb(0, 0, 0); 
+    font-family: 'M PLUS 1', sans-serif;
+}
+/*galicia turismo*/
+header h2{
+    color: white;
+    font-family: 'M PLUS 1', sans-serif;
+}
+/*título puestas de sol*/
+h1{
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    font-family: 'Yellowtail', cursive;
+}
+hr { /*los hr son las líneas haciendo paripe y las imágenes en clases*/
+    height: 6px;
+    border: none;
+    background: rgba(0, 0, 0, 0.1);
+} 
+
+hr:last-child {  /*dummy content*/
+    margin-right: 60%;
+}
+/*para introducir chiqui imágenes en la revista*/
+hr.image1 { 
+    padding-bottom: 50%;
+    background-image: url(https://images.pexels.com/photos/907485/pexels-photo-907485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+} 
+hr.image2 { 
+    padding-bottom: 50%;
+    background-image: url(https://images.pexels.com/photos/86695/sky-clouds-outdoors-scenic-86695.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+} 
+hr.image3 { 
+    padding-bottom: 50%;
+    background-image: url(https://images.pexels.com/photos/66997/pexels-photo-66997.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+} 
+hr.image4 { 
+    padding-bottom: 50%;
+    background-image: url(https://images.pexels.com/photos/37728/pexels-photo-37728.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+} 
+
+.page { /*todo lo que hay en el magazine*/
+    padding: 7em;
+    background: #cecece73;
+    max-width: 1100px;
+}
+
+/*el grid*/
+.archive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-gap: 1em;
+}
+
+.article {
+    padding: 1em;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 20px 20px rgba(0, 0, 0, 0.05);
+}
+.article p{
+    font-family: 'M PLUS 1', sans-serif;
+    line-height: 1.15;
+}
+.article:nth-child(1) {
+    grid-column: span 2;
+}
+.article:nth-child(3) {
+    grid-column: span 2;
+}
+.article:nth-child(4) {
+    grid-column: span 2;
+}
+.article:nth-child(5) {
+    grid-column: span 3;
+}
+.article:nth-child(13) {
+    grid-column: span 2;
+}
+.article:nth-child(15) {
+    grid-column: span 3;
+}
+/*Aquí van las 3 columnas*/
+
+.intro p{
+    text-align: center;
+    color: white;
+    font-family: 'M PLUS 1', sans-serif;
+}
+.article-container {
+    padding: 4em 2em;
+    -moz-column-count: 5;
+        column-count: 5;
+    -moz-column-width: 360px;
+        column-width: 360px;
+    -moz-column-gap: 36px;
+        column-gap: 36px;
+    -moz-column-fill: balance;
+        column-fill: balance;
+}
+.article-container p:first-child:first-letter {
+    float: left;
+    color: #ffffff;
+    font-size: 81px;
+    line-height: 60px;
+    padding-top: 10px;
+    padding-right: 8px;
+    padding-left: 3px;
+    font-weight: 700;
+}
+.article-container p {
+    orphans: 3;
+    widows: 3;
+    position: relative;
+    text-indent: 1em;
+    color: white;
+    font-family: 'M PLUS 1', sans-serif;
+}
+.article-container p:after {
+    content: '';
+    display: inline-table;
+    height: 0px;
+    margin-bottom: 0;
+}
+.article-container p:first-child {
+    text-indent: 0;
+}
