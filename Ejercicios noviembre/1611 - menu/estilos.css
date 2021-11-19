@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Slabo+27px&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    font-family: 'Montserrat', sans-serif;
+    background-size: cover;
+    width: 100%;
+    
+}
+/*la hamburguesa en la primera página de fondo*/
+.banner {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .8)), url(https://images.pexels.com/photos/4021944/pexels-photo-4021944.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) center no-repeat;
+    background-size: cover;
+}
+/*logo*/
+.logo {
+    height: 80px;
+    width: 80px;
+    position: fixed;
+    top: 10px;
+    left: 50px;
+    z-index: 100;
+}
+
+.logo img {
+    width: 100%;
+}
+/*menú hamburguesa que está a la derecha*/
+.hamburger-menu {
+    width: 35px;
+    height: 30px;
+    position: fixed;
+    top: 40px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 100;
+}
+/*aquí es lo de rotar arriba*/
+.line {
+    width: inherit;
+    height: 5px;
+    background-color: #16c3cf;
+    border-radius: 25px;
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+.line-2 {
+    height: 3px;
+}
+
+.change .line-1 {
+    transform: rotateZ(-45deg);
+}
+
+.change .line-2 {
+    transform: translate(5px, 20px);
+}
+
+.change .line-3 {
+    transform: rotateZ(45deg);
+}
+/*el navegador de la parte de arriba*/
+.top-nav {
+    height: 15vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url() no-repeat 50% 0;
+    background-size: cover;
+    position: fixed;
+    top: -15vh;
+    z-index: 50;
+    transition: top .4s;
+}
+
+.change .top-nav {
+    top: 0;
+}
+/*la parte de inicio,contacto, etc...*/
+.nav-list {
+    list-style: none;
+    width: 80%;
+    margin: auto;
+    height: inherit;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav-list li {
+    perspective: 500px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #ccc;
+    background-color: #000;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    display: block;
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: top;
+    transition: transform .3s;
+}
+
+
+.nav-link:hover {
+    transform: rotateX(90deg);
+}
+
+.nav-link::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    background-color: #000;
+    padding: inherit;
+    color: #16c3cf;
+    transform: rotateX(-90deg);
+    transform-origin: top;
+}
+/*Botón de explorar*/
+.btn-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    perspective: 1000px;
+}
+.banner-btn{
+    width: 350px;
+    height: 100px;
+    background: linear-gradient(#16c3cf, #156469);
+    font-family: 'Slabo 27px', sans-serif;
+    font-size: 35px;
+    letter-spacing: 4px;
+    color: white;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    text-shadow: 0 10px 10px #000;
+    transform: rotateX(70deg) rotateZ(30deg);
+    transform-style: preserve-3d;
+    text-shadow: 0 10px 10px #000;
+    cursor: pointer;
+    transition: transform .5s;
+}
+.banner-btn:hover {
+    transform: rotateX(30deg) rotateZ(0deg);
+}
+/*la parte de abajo de explore me*/
+.banner-btn::before {
+    content: '';
+    width: 100%;
+    height: 15px;
+    background-color: #156469;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: rotateX(90deg);
+    transform-origin: bottom
+}
+.banner-btn::after {
+    content: '';
+    width: 15px;
+    height: 100%;
+    background-color: #16c3cf;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotateY(-90deg);
+    transform-origin: right;
+}
+
+/*lo que está dentro de iconos*/
+.bottom-nav {
+    width: 100%;
+    height: 85vh;
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(img/borguesa.jpg) no-repeat 50% 0;
+    background-size: cover;
+    position: fixed;
+    bottom: -85vh;
+    transition: bottom .4s;
+}
+.change .bottom-nav {
+    bottom: 0;
+}
+.icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.icon-item {
+    perspective: 1000px;
+    margin: 10px;
+}
+
+.icon-link {
+    width: 200px;
+    height: 200px;
+    border: 8px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.icon-link:hover {
+    transform: rotateY(35deg);
+}
+
+.icon-link::before {
+    content: '';
+    height: 25px;
+    width: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+}
+
+.icon-link::after {
+    content: '';
+    height: 25px;
+    width: 5px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+
+.icon-link i {
+    color: #fff;
+    font-size: 60px;
+    width: 150px;
+    height: 150px;
+    background-color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #fff;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+    overflow: hidden;
+    position: relative;
+    transition: all .5s;
+}
+
+.icon-link i::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -130%;
+}
+/*los colorinchos de los iconos de las rrss*/
+.icon-item:nth-child(2) i:hover{
+    background-color: #F30508;
+}
+
+.icon-item:nth-child(1) i:hover{
+    background-color: #007FFC;
+}
+
+.icon-item:nth-child(3) i:hover{
+    background-color: #1C9CEA;
+}
+
+.icon-item:nth-child(4) i:hover{
+    background-color: black;
+}
+
+.icon-item:nth-child(5) i:hover{
+    background-color: #F73885;
+}
+
+.icon-item:nth-child(6) i:hover{
+    background-color: #49C557;
+}
+
+/*PARTE RESPONSIVE*/
+
+@media(max-width:1200px) {
+    
+    .top-nav {
+        background: #010101;
+    }
+
+    .nav-list {
+        justify-content: center;
+    }
+
+    .nav-link {
+        font-size: 25px;
+    }
+
+    .icons {
+        width: 70%;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .icon-link {
+        width: 180px;
+        height: 180px;
+        margin: 20px;
+    }
+
+    .icon-link i {
+        width: 130px;
+        height: 130px;
+        font-size: 40px;
+    }
+
+}
+
+@media(max-width: 900px) {
+
+    .banner-btn {
+        width: 300px;
+        height: 80px;
+        font-size: 30px;
+    }
+
+    .top-nav {
+        height: 25vh;
+        top: -25vh;
+    }
+
+    .bottom-nav {
+        height: 75vh;
+        bottom: -75vh;
+    }
+
+    .nav-list {
+        width: 70%;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .nav-link {
+        margin: 3px 0;
+    }
+
+    .icons {
+        width: 95%;
+    }
+
+    .icon-link {
+        width: 140px;
+        height: 140px;
+    }
+
+    .icon-link i {
+        width: 90px;
+        height: 90px;
+        font-size: 30px;
+    }
+}
+
+
+@media(max-width: 750px) {
+    .nav-list {
+        width: 60%;
+    }
+    .nav-list {
+        width: 60%;
+    }
+
+    .icon-link {
+        width: 120px;
+        height: 120px;
+    }
+
+    .icon-link i {
+        width: 70px;
+        height: 70px;
+    }
+
+}
+
+@media(max-width: 550px) {
+
+    .banner-btn {
+        width: 280px;
+        height: 70px;
+        font-size: 25px;
+    }
+
+    .logo {
+        width: 70px;
+        height: 70px;
+        left: 30px;
+    }
+
+    .top-nav {
+        height: 30vh;
+        top: -30vh;
+    }
+
+    .bottom-nav {
+        height: 70vh;
+        bottom: -70vh;
+    }
+
+    .icon-link {
+        width: 110px;
+        height: 110px;
+    }
+
+    .icon-link i {
+        width: 60px;
+        height: 60px;
+    }
+
+}
+
+@media(max-width: 450px) {
+
+    .banner-btn {
+        width: 260px;
+        height: 60px;
+    }
+
+    .top-nav {
+        height: 35vh;
+        top: -35vh;
+    }
+
+    .bottom-nav {
+        height: 65vh;
+        bottom: -65vh;
+    }
+
+    .nav-list {
+        width: 50%;
+    }
+}

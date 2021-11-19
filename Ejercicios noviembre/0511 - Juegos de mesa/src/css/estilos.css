@@ -1,0 +1,133 @@
+/*Letra para el logo*/
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+/*Poner en la fuente: font-family: 'Permanent Marker', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+/*Letra para el resto de contenido*/
+/*Poner en la fuente: font-family: 'Open Sans', sans-serif;*/
+body{
+    height: 1500px;
+}
+/*Aquí va el logo*/
+.logo{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20pt;
+    text-shadow: 2px 2px 4px #000000;
+}
+/*Tipos del menú de navegación*/
+header p, header a{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14pt;
+    color: white;
+}
+/*Menú*/
+nav{
+    width: 100%;
+    text-align: left;
+    background-color: #ee9b00;
+    border-radius: 1em;
+}
+header ul{
+    list-style: none;
+}
+header li{
+    display: inline-block;
+    margin-left: 50px; /*revisar*/
+}
+header a{
+    text-decoration: none;
+}
+/*La movida de búsquedas*/
+input{
+    margin-left: 100px;
+    padding: 5px;
+    width: 200px;
+    font-family: 'Open Sans', sans-serif;
+}
+/*Aquí empieza la sección//La caja lateral izquierda*/
+section{
+    background-color: #ee9b007c;
+    width: 350px;
+    height: 400px;
+    margin-top: 30px;
+    border-radius: 1em;
+    float: left;
+}
+section h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 16pt;
+    color: #ee9b00;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+section ul{
+    list-style: none;
+}
+section li{
+    margin-top: 5px;
+}
+section a{
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16pt;
+    color: black;
+}
+.negrita{
+    font-weight:lighter;
+}
+/*Aquí empieza el main: es donde se ve la galería de productos*/
+main{
+    display: inline-block;
+    width: 880px;
+    height: 100px;
+    margin-left: 100px;
+}
+main h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 16pt;
+    color: black;
+    margin: 50px;
+}
+/*Tamaño imágenes*/
+main img{
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+}
+main img:hover{
+    opacity: 60%;
+}
+/*FOOTER*/
+footer{
+    background-color: black;
+    margin-top: 10px;
+    border-radius: 1em;
+}
+footer h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20pt;
+    color: white;
+}
+footer a{
+    font-family:'Open Sans', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin: 10px;
+}
+/*Aquí organizo las columnas*/
+.columna1{
+    width: 20%;
+    display: inline-block;
+    margin-left: 150px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.logo1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40pt;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    text-shadow: 2px 2px 4px #ffffff;
+}

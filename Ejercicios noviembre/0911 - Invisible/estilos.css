@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+/*font-family: 'Montserrat', sans-serif;*/
+*{
+    margin: 0;
+    padding: 0%;
+}
+main{
+    background-image: url(img/invierno2.jpg);
+}
+/*Imagen de fondo y se añadió la animación a posteriori*/
+@keyframes llegadaRepentina {
+    0% {
+    transform: translateY(-100%);
+    }
+    100% {
+    transform: translateY(0);
+    }
+}
+.container{
+    height: 1000px;
+    padding-top: 7em;
+    animation: 1s ease-out 0s 1 llegadaRepentina;
+}
+/*Fondo blanco del fondo en height cambio cuan largo es*/
+.cont2{
+    margin: auto;
+    width: 30%;
+    display: block;
+    background-color: white;
+    height: 920px;
+    border-radius: 1em;
+    box-shadow: 5px 4px 4px black;
+    padding-top: 2em;
+}
+/*Imagen de las florecitas*/
+.cont2 img{
+    display: block;
+    margin: auto;
+    border-radius: 100%;
+    /*aquí padding no, mejor en el contenedor*/
+}
+/*Texto de dentro*/
+.cont2 h1{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 1em;
+}
+.cont2 p{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding: 2em;
+}
+/*ICONOS*/
+
+.iconos{
+    text-align: center;
+    width: 80%;
+    font-size: 25pt;
+    color: #551A8B;
+    margin: auto;
+    display: block;
+}
+
+.iconos a{
+    color: #551A8B;
+}
+i{
+    padding: 0.5em;
+}
+i:hover{
+    color: blue;
+}
+/*BOTÓN*/
+
+.boton{
+    text-align: center;
+    text-decoration: none;
+    padding: 1em;
+    width: 35%;
+    background-color: #551A8B;
+    display: block;
+    margin: auto;
+    border-radius: 1em;
+    color: white;
+    margin-top: 2em;
+    font-family: 'Montserrat', sans-serif;
+}
+/*RESPONSIVE*/
+@media(max-width: 1500px) {
+    .cont2 img{
+        border-radius: 100%;
+        width: 90%;
+    }
+}
+@media(max-width: 1350px) {
+    .cont2 img{
+        border-radius: 100%;
+        width: 90%;
+    }
+    .iconos{
+        font-size: 18pt;
+    }
+}
+
+@media(max-width: 900px) {
+    .cont2 img{
+        border-radius: 100%;
+        width: 60%;
+    }
+    .iconos{
+        font-size: 15pt;
+    }
+}
+

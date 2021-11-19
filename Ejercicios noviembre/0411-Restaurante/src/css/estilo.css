@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap');
+
+ul{
+    list-style: none;
+}
+
+body{
+    height: 2920px;
+}
+/*barra de navegación*/
+
+nav{
+    width: 99%;
+    text-align: center;
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+}
+
+nav a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+div{
+    width: 100%;
+    display: inline block;
+}
+/*imagen de la portada*/
+
+img{
+    width: 100%;
+    display: inline-block;
+}
+/*logo del menú de navegación*/
+
+.logo{
+   font-family: 'Ceviche One', cursive;
+   font-size: 40pt;
+}
+/*Logo de encima de la imagen*/
+
+.logo2{
+    font-family: 'Ceviche One', cursive;
+    font-size: 80pt;
+    color: white;
+}
+
+.texto{
+    font-size: 30pt;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+/*texto encima de la imagen*/
+.contenedor{
+    display: inline-block;
+    text-align: center;
+}
+.texto-encima{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*la sección contando la historia*/
+section{
+    background-color: rgb(189, 149, 149);
+    height: 250px;
+    padding: 10%;
+    margin-top: 10px;
+}
+
+/*Texto de la historia del sitio*/
+.historia{
+    text-align: left;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20pt;
+   
+}
+
+/*Barra sobre los platos del restaurante asiático*/
+article{
+    background-color: rgb(0, 0, 0);
+    height: 50px;
+    padding: 5%;
+    margin-top: 10px;
+}
+
+article p{
+    color: white;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+}
+/*Aquí va un grid con las imágenes del menú, que son todas la misma*/
+
+.grid{
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.columna {
+    float: left;
+    width: 32.9%;
+    padding-right: 5px;
+}
+
+.fila::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.grid img:hover{
+    opacity: 60%;
+}
+/*Aquí va el footer*/
+footer{
+    background-color: rgb(189, 149, 149);
+    height: 250px;
+    padding: 10%;
+    margin-top: 10px;
+}
+footer h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20pt;
+}
+footer p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+/*Aquí organizo las columnas*/
+.columna1{
+    width: 20%;
+    display: inline-block;
+    margin-left: 3cm;
+    margin-bottom: 50px;
+}
+hr{
+    border: none; 
+    height: 20px; 
+    color: black; 
+    background-color: black;
+    
+}
+
+@media (max-width:900px) {
+    nav{
+        width: 100%;
+        position: absolute;
+    }
+    nav a{
+       width: 10%;
+    }
+    .logo{
+        font-size: 25pt; 
+    }
+    .historia{
+        font-size: 14pt;
+        margin-top: 30px;
+    }
+    .columna img, .fila img{
+        display: inline;
+    }
+    .columna1{
+        width: 5%;
+    }
+}
+
+
+
+

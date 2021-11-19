@@ -1,0 +1,196 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+/*Título logo*/
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+body {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 1240px;
+	font-family: 'Roboto', sans-serif;
+	background-color: #d6bbbd;
+}
+
+/* Typography */
+
+h1 {
+	font-size: 28px;
+	font-weight: 300;
+	flex: 1;
+}
+
+h5 {
+	font-weight: 500;
+	line-height: 1.7em;
+	font-weight: bolder;
+	font-size: 12pt;
+}
+
+h6 {
+	color: #666;
+	font-size: 14px;
+}
+
+/* BANNER*/
+
+.product-filter {
+	display: flex;
+	padding: 5px 0;
+}
+.product-filter h1{
+	font-family: 'Satisfy', cursive;
+	font-size: 40pt;
+}
+/*se ponen al lado los menús*/
+.sort {
+	display: flex;
+	align-self: flex-end;
+	
+}
+/*el margin-top es para que quede alineado con chaquetillas*/
+.collection-sort {
+	display: flex;
+	flex-direction: column;
+	margin-top: -105px;
+}
+
+.collection-sort:first-child {
+	padding-right: 20px;
+}
+/*la parte de filtrar/destacar  por*/
+label {
+	color: #666;
+	font-size: 10px;
+	font-weight: 500;
+	line-height: 2em;
+	text-transform: uppercase;
+}
+
+/*PRODUCTOS*/
+.products {
+	display: flex;
+	flex-wrap: wrap;
+}
+/*esto hace que los productos que estaban en columna se pongan en línea*/
+/*y también hace la cajita a los productos poniendo color y sombra*/
+.product-card {
+	display: flex;
+	flex-direction: column;
+	margin: 1em;
+	padding: 2%;
+	flex: 1 16%;
+	border-radius: 2em;
+	background-color: #FFF;
+	box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.25);
+}
+
+.product-image img {
+	width: 100%;
+	border-radius: 2em;
+}
+.product-image img:hover{
+	opacity: 60%;
+}
+
+.product-info {
+	margin-top: auto;
+	padding-top: 20px;
+	text-align: center;
+}
+/*PRUEBA*/
+.product-card:nth-child(1) img{
+	display: none;
+}
+
+.product-card:nth-child(1){
+	background-image: url(img/hola4.jpg);
+}
+.product-card:nth-child(1) h5, .product-card:nth-child(1) h6{
+    visibility: hidden;
+}
+.product-card:nth-child(1) h5::after{
+    display: inline;
+    background-color: #382f30;
+    color: white;
+    margin-bottom: 10px;
+    margin-right: 15%;
+    padding: 2px 10px;
+    font-size: 1.625em;
+    line-height: 1.34;
+    -webkit-box-decoration-break: clone;
+    -o-box-decoration-break: clone;
+    box-decoration-break: clone;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    white-space: normal;
+    text-transform: uppercase;
+    visibility: visible;
+    text-align: center;
+    content: 'Rebajas';
+    position: absolute;
+    top: 80%;
+    left: 8%;
+    box-sizing: content-box;
+	font-size: 30pt;
+	box-shadow: 1px 6px 14px #000000;;
+}
+
+.product-card:nth-child(1) h6::after{
+    display: inline;
+    color: white;
+    margin-bottom: 10px;
+    margin-right: 15%;
+    padding: 2px 10px;
+    font-size: 1em;
+    line-height: 1.34;
+    -webkit-box-decoration-break: clone;
+    -o-box-decoration-break: clone;
+    box-decoration-break: clone;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    white-space: normal;
+    text-transform: uppercase;
+    visibility: visible;
+    text-align: left;
+    content: 'Ver todo';
+    position: relative;
+    top: 80%;
+    left: 0%;
+    box-sizing: content-box;
+	text-align: center;
+}
+/*RESPONSIVE*/
+@media ( max-width: 920px ) {
+	
+	.product-card {
+		flex: 1 21%;
+	}
+	
+	.products .product-card:first-child, 
+	.products .product-card:nth-child(2) {
+		flex: 2 46%;
+	}
+	
+}
+
+@media ( max-width: 600px ) {
+	
+	.product-card {
+		flex: 1 46%;
+	}
+	
+}
+
+@media ( max-width: 480px ) {
+	
+	h1 {
+		margin-bottom: 20px;
+	}
+	
+	.product-filter {
+		flex-direction: column;
+	}
+	
+	.sort {
+		align-self: flex-start;
+	}
+	
+}

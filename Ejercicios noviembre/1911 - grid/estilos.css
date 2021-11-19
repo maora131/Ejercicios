@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@200&display=swap');
+/*más negrita*/
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+body {
+    background: #03335a73;
+    color: #777;
+    padding: 1em;
+    font-family: sans-serif;
+    margin: 3em;
+}
+h2{
+    color:white; 
+    font-family: 'M PLUS 1', sans-serif;
+}
+h1{
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    font-family: 'Yellowtail', cursive;
+}
+hr { /*los hr son las líneas haciendo paripe*/
+    height: 6px;
+    border: none;
+    background: rgba(0, 0, 0, 0.1);
+} 
+
+hr:last-child {  /*dummy content*/
+    margin-right: 60%;
+}
+/*para introducir chiqui imágenes en la revista*/
+hr.image1 { 
+    padding-bottom: 50%;
+    background-image: url(https://images.pexels.com/photos/907485/pexels-photo-907485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+} 
+hr.image2 { 
+    padding-bottom: 50%;
+    background-image: url(https://images.pexels.com/photos/86695/sky-clouds-outdoors-scenic-86695.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+} 
+hr.image3 { 
+    padding-bottom: 50%;
+    background-image: url(https://images.pexels.com/photos/66997/pexels-photo-66997.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+} 
+hr.image4 { 
+    padding-bottom: 50%;
+    background-image: url(https://images.pexels.com/photos/37728/pexels-photo-37728.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+} 
+
+.page { /*todo lo que hay en el magazine*/
+    padding: 7em;
+    background: #cecece73;
+    max-width: 1100px;
+}
+
+/*el grid*/
+.archive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-gap: 1em;
+}
+
+.article {
+    padding: 1em;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 20px 20px rgba(0, 0, 0, 0.05);
+}
+.article p{
+    font-family: 'M PLUS 1', sans-serif;
+    line-height: 1.15;
+    text-align: left;
+}
+.article:nth-child(1) {
+    grid-column: span 2;
+}
+.article:nth-child(3) {
+    grid-column: span 2;
+}
+.article:nth-child(4) {
+    grid-column: span 2;
+}
+.article:nth-child(5) {
+    grid-column: span 3;
+}
+.article:nth-child(13) {
+    grid-column: span 2;
+}
+.article:nth-child(15) {
+    grid-column: span 3;
+}

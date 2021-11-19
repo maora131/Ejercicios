@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+*{
+    text-align: center;
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+/*Todo el body es del mismo color*/
+body{
+    background-color: #D773A2;
+}
+main{
+    background-size: cover;
+    background-image:
+    linear-gradient(to bottom, rgba(87, 91, 109, 0.52), rgba(85, 30, 72, 0.73)),
+    url('img/tokyo.jpg');
+    
+}
+/*para bajar las cosas*/
+.pantalla1{
+    height: 100vh;
+    padding-top: 6em;
+}
+/*Aquí sería lo de suscrribete*/
+main h1{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 60pt;
+    text-align: center;
+    color: white;
+}
+/*La barrita de suscribirse*/
+hr{
+    color: white;
+    background-color: white;
+    width:50%;
+    height: 100%;
+    border: none; 
+    height: 10px; 
+    margin: auto;
+}
+/*Tamaño del icono que tiene una animación saltando*/
+@keyframes bounce{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-70px);
+    }
+}
+i{
+    font-size: 100pt;
+    color: white;
+    animation: bounce 1.5s
+    infinite alternate;
+    padding-top: 1em;
+}
+/*El botón de clica aquí*/
+button{
+    padding-top: 1em;
+    border-radius: 2em;
+    padding: 1em;
+    width: 150px;
+    display: block;
+    margin: auto;
+    font-size: 14pt;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color:transparent;
+    border:3px solid;
+}
+/*El botón se mueve un poquito*/
+button:hover{
+    transform: translateY(-1px);
+}
+
+/*El switch de sí/no*/
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #d86fa08e;
+}
+  
+ input:focus + .slider {
+    box-shadow: 0 0 1px #d86fa08e;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/*Cuadro parte izquierda, todo lo del formulario*/
+
+form p{
+    font-size: 14pt;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: purple;
+    padding-top: 2em;
+}
+
+.formulario{
+    width: 50%;
+    height: 600px;
+    background-color: #232328;
+    box-sizing: border-box;  
+    border-radius: 1em 0 0 1em;
+}
+.formulario p {
+	color: #fff;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 18px;
+	letter-spacing: 1px;
+	font-weight: 200;
+	margin-bottom: 8px;
+}
+/*Para cambiar los datos de contacto*/
+input{
+    display: block;
+    padding: 1em;
+    width: 80%;
+    margin: auto;
+    background: none;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 2em;
+    border-bottom: solid 1px gray;
+}
+/*Márgenes para el nombre y el email*/
+#nombre{
+    margin-top: 6em;
+}
+#email{
+    margin-top: 4em;
+}
+/*Para separar la pregunta de la newsletter*/
+form p{
+    margin-top: 2em;
+}
+/*Los márgenes son para separar el sí y el no*/
+form label{
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: 2em;
+    margin-bottom: -10px;
+    margin-left: 10px;
+}
+form button{
+    margin-top: 2em;
+}
+/*La segunda página*/
+.pagina2 h1{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    padding-top: 5em;
+    font-size: 40pt;
+    text-shadow: 2px 2px 6px  #d86fa08e;
+}
+.pagina2{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, .7)),url('img/tokyo2.jpg');
+    /*(rgba(0, 0, 0, .8), rgba(0, 0, 0, .7)),*/
+    width: 50%;
+	background-size: cover;
+	box-shadow: -10px 0 30px rgba(0, 0, 0, .3);
+	position: relative;
+    border-radius: 0 1em 1em 0;
+}
+/*El conjunto de los dos*/
+.conjunto{
+    width: 70%;
+    display: none; /*primero era flex y luego none, entonces desaparece de la página.*/
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+@media (max-width: 850px) {
+    .pagina2 h1{
+        font-size: 20pt;
+        margin-top: 4em;
+    }
+}
+
+/*PARTE RESPONSIVE*/
+@media (max-width: 850px) {
+
+    .conjunto {
+        width: 400px;
+    }
+
+    .formulario {
+        width: 100%;
+        border-radius: 1em 1em 1em 1em;
+    }
+    .pagina2{
+        display: none;
+    }
+}
+@media (max-width: 650px) {
+
+    .conjunto {
+        width: 300px;
+    }
+
+    .formulario {
+        width: 80%;
+        border-radius: 1em 1em 1em 1em;
+    }
+    .pagina2{
+        display: none;
+    }
+}
+@media (max-width: 500px) {
+
+    .conjunto {
+        width: 300px;
+    }
+
+    .formulario {
+        width: 80%;
+        border-radius: 1em 1em 1em 1em;
+    }
+    .pagina2{
+        display: none;
+    }
+}

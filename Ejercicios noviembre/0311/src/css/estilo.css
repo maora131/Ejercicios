@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap');
+
+ul{
+    list-style: none;
+}
+body{
+    height: 3000px;
+}
+nav{
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+}
+nav a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+div{
+    width: 100%;
+    display: inline block;
+}
+
+img{
+    width: 100%;
+    display: inline-block;
+}
+.logo{
+   font-family: 'Ceviche One', cursive;
+   font-size: 40pt;
+}
+/*Logo de encima de la imagen*/
+.logo2{
+    font-family: 'Ceviche One', cursive;
+    font-size: 80pt;
+    color: white;
+}
+.texto{
+    font-size: 40pt;
+    color: white;
+}
+
+/*texto encima de la imagen*/
+.contenedor{
+    display: inline-block;
+    text-align: center;
+}
+.texto-encima{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

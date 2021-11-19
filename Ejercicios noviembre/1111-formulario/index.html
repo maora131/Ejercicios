@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://kit.fontawesome.com/5ec3cf3c0d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+    <div class="todo">
+    <main>
+        <div class="pantalla1"><!--clase para el java-->
+        <hr>
+        <h1>SUSCRÍBETE</h1>
+        <hr>
+        <!--Flechita de abajo que luego se animará-->
+        <i class="fas fa-arrow-down"></i>
+        <button class="boton1">Haz clic</button> <!--clase para el java-->
+    </div>
+    </main>
+
+    <!--PARTE 2-->
+    
+    <section>
+
+        <!--Parte de formulario donde se pone el contacto y el botón-->
+        <div class="conjunto"> <!--Esto contiene las dos cajas que van en conjunto-->
+        <div class="formulario">
+            <form>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <input type="email" name="email" id="email" placeholder="E-mail">
+                <!--Pregunta de debajo-->
+                <p>¿Quieres recibir newsletters?</p>
+                <!--Para el sí no-->
+                <label>NO</label>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <label>SÍ</label>
+                <button>Enviar</button>
+            </form>
+        </div>
+        <!--Aquí es la segunda caja que contiene una imagen que va contigua al formulario-->
+        <div class="pagina2">
+            <h1>¡Bienvenido!</h1>
+        </div>
+    </div>
+    </section>
+    <script>//al hacer clic en el botón
+        document.querySelector('.boton1').addEventListener('click', () => {
+            document.querySelector('.pantalla1').style.display = 'none';
+        
+            document.querySelector('.conjunto').style.display = 'flex';
+            document.querySelector('.todo').style.background = '#d86fa08e';
+        });
+        
+        //al hacer clic en la equis
+        
+        document.querySelector('.equis').addEventListener('click', () => {
+        document.querySelector('.pantalla1').style.display = 'block'
+        document.querySelector('.formage').style.display = 'none';});</script>
+</body>
+</html>

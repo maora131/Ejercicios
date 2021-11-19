@@ -1,0 +1,228 @@
+/*FUENTES*/
+/*Título*/
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+/*font-family: 'Work Sans', sans-serif;*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+/*CONTENEDOR, sería la primera página que se muestra*/
+.container {
+    width: 100%;
+    height: 100vh;
+}
+/*Título travelandcreate*/
+.pag1{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    overflow: hidden;
+}
+/*animación apareciendo del título*/
+.pag1::after {
+    content: '';
+    width: 250%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #000, #000);
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: bannerAnim 3s linear forwards;
+}
+/*desaparece y aparece*/
+@keyframes bannerAnim {
+    0%{right: 0;}
+    100%{right: -250%;}
+}
+/*travelandcreate*/
+.pag1 h1 {
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    font-size: 70pt;
+}
+/*líneas del travel*/
+.pag1 hr{
+    color: white;
+    background-color: white;
+    width:200%;
+    height: 100%;
+    border: none; 
+    height: 5px; 
+    margin: auto;
+}
+/*botoncito de clic aquí*/
+.pag1 button {
+    outline: none;
+    width: 230px;
+    padding: 10px;
+    background: linear-gradient(to right, #440402, #c0120c);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    transform: perspective(500px) rotateY(-15deg);
+    text-shadow: 6px 3px 2px rgba(0, 0, 0, .4);
+    cursor: pointer;
+    animation: buttonAnim 1s 2.5s backwards;
+    transition: all .5s;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+    margin-top: 2em;
+}
+/*animación del botón*/
+@keyframes buttonAnim {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+/*animación, efecto de lao del botón y el brilli*/
+.pag1 button::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, white, transparent);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transform: skewX(-30deg);
+    transition: left .5s;
+}
+.pag1 button:hover {
+    transform: perspective(500px) rotateY(15deg);
+    text-shadow: -6px 3px 2px rgba(0, 0, 0, .4);
+    background: linear-gradient(to left, #440402, #c0120c);
+}
+.pag1 button:hover::before {
+    left: 100%;
+}
+/*PASAFOTOS*/
+
+.todo {
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s;
+}
+.pasafotos {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    position: relative;
+}
+/*imágenes diapositivas*/
+.imagendiapo {
+    width: 100%;
+    height: 100vh;
+}
+.imagendiapo:nth-child(1) {
+    background: linear-gradient(100deg, rgba(38, 38, 38, 1), rgba(38, 38, 38, .8), transparent), url(img/lisboa.jpg) center no-repeat;
+    background-size: cover;
+}
+.imagendiapo:nth-child(2) {
+    background: linear-gradient(100deg, rgba(38, 38, 38, 1), rgba(38, 38, 38, .8), transparent), url(img/paris.jpg) center no-repeat;
+    background-size: cover;
+}
+.imagendiapo:nth-child(3) {
+    background: linear-gradient(100deg, rgba(38, 38, 38, 1), rgba(38, 38, 38, .8), transparent), url(img/londres.jpg) center no-repeat;
+    background-size: cover;
+}
+.imagendiapo:nth-child(4) {
+    background: linear-gradient(100deg, rgba(38, 38, 38, 1), rgba(38, 38, 38, .8), transparent), url(img/tokyo.jpg) center no-repeat;
+    background-size: cover;
+}
+/*El texto que hay dentro de las ciudades*/
+.contenido {
+    width: 500px;
+    position: relative;
+    top: 25%;
+    left: 5%;
+}
+.contenido h1 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 80px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 25px;
+}
+.contenido p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    color: #ccc;
+}
+/*el botón que hay debajo del texto*/
+.contenido button {
+    width: 150px;
+    padding: 10px 10px 0 0;
+    margin-top: 30px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: white;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+/*la flechita de leer más*/
+.contenido i {
+    margin-left: 8px;
+    font-size: 12pt;
+}
+/*animación pasafotos*/
+@keyframes pasafotos {
+    0%{left: 0;}
+    10%{left: 0;}
+    15%{left: -100%;}
+    25%{left: -100%;}
+    30%{left: -200%;}
+    40%{left: -200%;}
+    45%{left: -300%;}
+    55%{left: -300%;}
+    60%{left: -200%;}
+    70%{left: -200%;}
+    75%{left: -100%;}
+    85%{left: -100%;}
+    90%{left: 0;}
+}
+
+/*PARTE RESPONSIVE*/
+@media(max-width: 1000px) {
+    .pag1 h1 {
+        font-size: 80px;
+    }
+}
+
+@media(max-width: 650px) {
+    .pag1 h1 {
+        font-size: 40px;
+    }
+
+    .pag1 button {
+        width: 180px;
+        padding: 7px;
+        font-size: 20px;
+    }
+
+    .contenido {
+        width: 300px;
+    }
+
+    .contenido h1 {
+        font-size: 30px;
+    }
+
+    .contenido p {
+        font-size: 15px;
+    }
+}
+
