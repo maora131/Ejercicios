@@ -1,2 +1,2 @@
 # Ejercicios
-Todos los ejercicios
+Todos los ejercicios hechos en el mes de noviembre en Formaweb IV.
