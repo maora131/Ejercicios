@@ -142,6 +142,10 @@ i:hover{
     font-weight: bold;
 }
 
+.boton:hover{
+    background-color: #FDCC0E;
+}
+
 /*RESPONSIVE*/
 @media(max-width: 1500px) {
     .cont2 img{
