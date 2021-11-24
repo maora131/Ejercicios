@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">  
+        <form id="contact" action="" method="post">
+        <h3>Formulario</h3>
+        <h4>¡Contacta con nosotros!</h4>
+        <fieldset>
+            <label for="uname" required minlength="10">Nombre</label>
+            <input  type="text" tabindex="1" required autofocus> <!--tabindex es el orden en el que los elementos deben de ir al bajar con tab-->
+        </fieldset>
+        <fieldset>
+            <label for="email">Correo electrónico</label>
+            <input  type="email" tabindex="2" required>
+        </fieldset>
+        <fieldset>
+            <label for="phone">Tu número de teléfono</label>
+            <input  type="tel" pattern="[0-9]{9}" tabindex="3" required>
+        </fieldset>
+        <fieldset>
+            <label for="web">Página web</label>
+            <input  type="url" tabindex="4" required>
+        </fieldset>
+        <fieldset>
+            <label for="comment">Comentarios</label>
+            <textarea  tabindex="5" required></textarea>
+        </fieldset>
+        <fieldset>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
+        </fieldset>
+        </form>
+        
+    </div>
+</body>
+</html>
