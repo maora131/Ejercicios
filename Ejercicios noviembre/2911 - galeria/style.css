@@ -1,11 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap');
+
 h1 {
-  font-family: helvetica, arial, sans-serif;
+  font-family: 'Outfit', sans-serif;
   text-align: center;
 }
 
 body {
   width: 640px;
   margin: 0 auto;
+  background-image: url(images/fondo.jpg);
+  background-size: cover;
+}
+body h1{
+  background-color: white;
+  padding: 0.5em;
 }
 
 .full-img {
