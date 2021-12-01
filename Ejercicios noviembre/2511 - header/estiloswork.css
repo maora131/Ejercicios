@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: #5A414C;
+}
+
+body {
+    color: #5A414C;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+    margin-top: 60px;
+}
+main h1{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif"
+}
+/*Imágenes ficticias del portfolio*/
+#portfolio {
+    width:100%;
+    margin:40px 0px;
+    
+    }
+/*Losetas. Primero estaban juntas y con márgenes se las separa*/
+.tile { 
+    float:left;
+    min-height:200px; 
+    max-height:250px; 
+    width:30%;
+    border:1px #fff solid; 
+    margin-left: 30px;
+    margin-top: 30px;
+    }
+.tile:hover { 
+    opacity: 0.5; 
+}
+/*diferentes tipos de losetas*/
+.web {
+    background:#ffb4a2;
+}
+.flyers {
+    background: #b5838d;
+}
+.bcards { 
+    background: #83c5be; 
+}

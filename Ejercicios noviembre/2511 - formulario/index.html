@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+</head>
+<body>
+    <!--Encabezado-->
+    <header>
+        <nav>
+        <ul>
+            <li><a href="about.html">Sobre nosotros</a></li>
+            <li><a href="work.html">Trabajo</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+        </ul>
+        </nav>
+    </header>
+    <!--FORMULARIO-->
+    <div class="container">  
+        <form id="contact" action="" method="post">
+        <h3>Formulario de contacto</h3>
+        <!--Checkbox sexo-->
+        <fieldset>
+            <label for="sexo">Indique su sexo</label>
+            <input class="caja" type="checkbox">Hombre
+            <input class="caja" type="checkbox">Mujer
+        </fieldset>
+        <!--Nombre-->
+        <fieldset>
+            <label for="uname" required minlength="10">Nombre</label>
+            <input  type="text" tabindex="1" required autofocus> <!--tabindex es el orden en el que los elementos deben de ir al bajar con tab-->
+        </fieldset>
+        <!--Apellido-->
+        <fieldset>
+        <label for="surname" required minlength="10">Apellido</label>
+            <input  type="text" tabindex="2" required autofocus>
+        </fieldset>
+        <!--Cumpleñaos-->
+        <fieldset>
+        <label for="surname">Fecha de nacimiento</label>
+            <input  type="date" tabindex="3" required autofocus>
+        </fieldset>
+
+        <!--Correo-->
+        <fieldset>
+            <label for="email">Correo electrónico</label>
+            <input  type="email" tabindex="4" required>
+        </fieldset>
+        <!--Tlf-->
+        <fieldset>
+            <label for="phone">Tu número de teléfono</label>
+            <input  type="tel" pattern="[0-9]{9}" tabindex="5" required>
+        </fieldset>
+        <!--Nacionalidad-->
+        <fieldset>
+            <label for="nac">Nacionalidad:</label>
+            <select name="select2">
+                <option value="spanish">Española</option>
+                <option value="portugese">Portuguesa</option>
+                <option value="italian">Italiana</option>
+                <option value="france">Francesa</option>
+            </select>
+        </fieldset>
+        <!--Pasaporte-->
+        <fieldset>
+            <label for="passport">Número de pasaporte</label>
+            <input  type="url" tabindex="6" required>
+        </fieldset>
+        <!--Ciudad-->
+        <fieldset>
+            <label for="passport">Ciudad de residencia</label>
+            <input  type="url" tabindex="7" required>
+        </fieldset>
+        <!--Comentarios-->
+        <fieldset>
+            <label for="comment">Comentarios</label>
+            <textarea  tabindex="8" required></textarea>
+        </fieldset>
+        <!--Enviar-->
+        <fieldset>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
+        </fieldset>
+        </form>
+        
+    </div>
+    <!--footer-->
+    <footer>
+        <ul>
+        <li><a href="about.html">Sobre nosotros</a></li>
+        <li><a href="work.html">Trabajo</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        </ul>
+        <ul class="social-row">
+        <li><a href="https://github.com/my-github-profile"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://twitter.com/my-twitter-profile"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/my-linkedin-profile"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+    </footer>
+</body>
+</html>

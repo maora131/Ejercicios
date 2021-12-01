@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*body {
+    color: #333;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}*/
+
+main {
+    flex: 1 0 auto;
+}
+
+html, body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+    width: 100%;
+    max-width: 100%;
+}
+/*fila*/
+.row {
+    margin: 0;
+}
+/*Contenido about*/
+.about-content, .about-panel {
+    max-width: 50%;
+    width: 50%;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(233, 150, 122, 0.2);
+    background-color: white;
+    overflow-y: auto;
+    height: 100vh;
+    max-width: 100%;
+}
+
+.about-panel {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+}
+.about-panel .photo-about {
+    position: relative;
+    top: 0;
+    height: 100vh !important;
+    background-size: cover;
+    overflow: hidden;
+}
+/*parte de la info del about*/
+.about-info {
+    font-family: "Montserrat";
+    position: absolute;
+    z-index: 100100;
+    top: 50%;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+.about-info .about-info-name {
+    width: 100%;
+    letter-spacing: 3px;
+    font-weight: 500;
+    font-size: 2.5vw;
+}
+.about-info .about-info-contact {
+    margin-top: 25px;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+    height: 130px;
+}
+.about-info .about-info-contact h4 {
+    margin-bottom: 5px;
+    font-weight: 300;
+    font-size: 1.3vw;
+}
+.about-info .about-info-contact p {
+    font-size: 1.2vw;
+    font-weight: 100;
+    color: #b5b5b5;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.about-info .about-info-contact a {
+    margin-bottom: 5px;
+    font-weight: 300;
+    font-size: 1.2vw;
+    color: white;
+}
+
+.about-content {
+    float: left;
+    padding-top: 30px;
+    background: white;
+    color: #4B384C;
+}
+.about-content p, .about-content blockquote {
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.07em;
+}
+.about-content h1 {
+    z-index: -1;
+    color: #5A414C;
+    text-align: center;
+    line-height: 90px;
+    font-size: 90px;
+    font-weight: 200;
+    letter-spacing: -0.1em;
+    width: 95%;
+    margin-bottom: 10px;
+    margin-top: 60px;
+}
+/*RESPONSIVE*/
+@media only screen and (max-width: 450px) {
+    .about-content {
+    padding-left: 40px;
+    padding-right: 40px;
+    }
+}
+.about-content .about-me {
+    margin: 3% auto;
+    text-align: justify;
+    font-weight: 300;
+    width: 63%;
+}
+.about-content .about-me p {
+    line-height: 23px;
+}
+.about-content .about-me .row {
+    height: 100vh;
+}
+
+.Synopsis-highlightLine {
+    width: 52px;
+    height: 4px;
+    background: #5A414C;
+    margin: 30px 0;
+}
+
+.Synopsis-highlight {
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    line-height: 25px !important;
+    width: 100%;
+    color: #5A414C;
+}
+
+  /* Parte 2 */
+.about-panel {
+    height: 100%;
+    height: 100%;
+    height: 100%;
+}
+.about-panel .about-info-contact {
+    display: block;
+    margin: 30px;
+}
+.about-panel .about-info-contact .up-two {
+    -webkit-animation-delay: 0.08s;
+    -moz-animation-delay: 0.08s;
+    animation-delay: 0.08s;
+    transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+    display: block;
+}
+.about-panel .about-info-contact {
+    display: block;
+    margin: 30px;
+}
+.about-panel .about-info-contact .up-three {
+    transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+    display: block;
+}
+.about-panel .about-info-contact {
+    display: block;
+    margin: 30px;
+}
+.about-panel .about-info-contact .up-four {
+    display: block;
+}
+
+.perspective-container {
+    transform: matrix(1, 0, 0, 1, 0, 0) !important;
+}
+/*para cambiar la imagen*/
+.photo-about {
+    background: url("img/azul2.png") no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    margin-top: 40px;
+    overflow: hidden;
+}
+/*filtro que tiene puesta la imagen*/
+.hide-photo-filter {
+    position: relative;
+    top: 0;
+    background-color: rgba(30, 109, 255, 0.2);
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+}
